@@ -1,22 +1,19 @@
 //Using SDL and standard IO
-#include "SDL2/SDL.h"
 #include <stdio.h>
+#include "Graficos.h"
 
-//Screen dimension constants
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
+int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaGraficos_criar_cor(int r, int g, int b) {
+	printf("Criando cor r:%d g:%d b:%d \n");
+	return 0;
+}
 
-void llvm_bibliotecas_Graficos_inicializar() {
-	 //The window we'll be rendering to
-    SDL_Window* window = NULL;
-    
-    //The surface contained by the window
-    SDL_Surface* screenSurface = NULL;
+int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaGraficos_definir_cor(int cor) {
+	printf("Definindo cor \n");
+	return 0;
+}
 
-    //Initialize SDL
-    if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
-    {
-        printf( "SDL could not initialize!");
-    }
+int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaGraficos_desenhar_ponto(int x, int y) {
+	printf("Desenhando ponto na posição x:%d y:%d \n", x, y);
+	return 0;
 }
 
