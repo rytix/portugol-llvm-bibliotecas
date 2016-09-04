@@ -1,1 +1,3 @@
-bin\programa.exe
+@echo off
+mingw32-make run
+PAUSE
