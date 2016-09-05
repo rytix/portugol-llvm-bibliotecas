@@ -1,0 +1,1 @@
+void portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaUtil_aguarde(int intervalor);

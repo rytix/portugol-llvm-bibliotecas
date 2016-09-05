@@ -1,7 +1,7 @@
 #CC especifica o compilador
 CC = gcc
 
-LINKER_FLAGS = -lmingw32 -lSDL2 -lSDL2main
+LINKER_FLAGS = -lmingw32 -lSDL2 -lSDL2main -lSDL2_image
 
 BIN_FOLDER = bin
 OBJ_FOLDER = obj
@@ -17,7 +17,7 @@ make_dir:
 	mkdir -p $(BIN_FOLDER)
 
 build_bitcode:
-	java -jar tools/portugol-compiler-llvm.jar $(SRC_FOLDER)/programa.por -o $(OBJ_FOLDER)/programa.bc
+	java -jar tools/portugol-core-llvm.jar $(SRC_FOLDER)/programa.por -o $(OBJ_FOLDER)/programa.bc
 
 build_object:
 	llc $(OBJ_FOLDER)/*.bc -filetype=obj -o $(OBJ_FOLDER)/$(OUTPUT_FILE).o

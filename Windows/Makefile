@@ -4,7 +4,7 @@ LINKER_FLAGS = -lmingw32
 
 BUILD_FOLDER = build
 
-LIBRARIES = -lSDL2 -lSDL2main
+LIBRARIES = -lSDL2 -lSDL2main -lSDL2_image
 
 TEST_LIB_FOLDER = ../test/lib
 
