@@ -1,4 +1,4 @@
 cd ../src
-mingw32-make windows
+mingw32-make windows -s
 cd ../windows
 PAUSE

@@ -2,23 +2,30 @@ CC = gcc
 
 LINKER_FLAGS = -lmingw32
 
-BUILD_FOLDER = ../windows/lib
+BUILD_FOLDER = lib
 
 LIBRARIES = -lSDL2 -lSDL2main -lSDL2_image
 
 TEST_LIB_FOLDER = ../test/lib
 
-windows: make compile copy_to_test move
 
-make: 
-	mkdir -p $(BUILD_FOLDER)
-	cd ../src
+#Windows
+windows: make_windows compile_windows copy_to_test move_windows
 
-compile:
+make_windows:
+	@echo Construindo pastas
+	mkdir -p ../windows/$(BUILD_FOLDER)
+
+compile_windows:
+	@echo Compilando bibliotecas
+	
 	$(CC) -c *.c -g
 
-copy_to_test:
-	cp *.o $(TEST_LIB_FOLDER)
+move_windows:
+	@echo Movendo para pasta bin
+	mv *.o ../windows/$(BUILD_FOLDER)
 
-move:
-	mv *.o $(BUILD_FOLDER)
+
+copy_to_test:
+	@echo Copiando para o projeto de teste
+	cp *.o $(TEST_LIB_FOLDER)
