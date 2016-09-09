@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <SDL.h>
-#include <SDL2/SDL_image.h>
+//#include <SDL2/SDL_image.h>
 #include "Graficos.h"
 
 //Screen dimension constants
@@ -54,7 +54,8 @@ int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaGraf
     #ifdef DEBUG
         printf("Carregando imagem \"%s\" \n", caminho);
     #endif
-    SDL_Surface* image_endereco = IMG_Load(caminho);
+    //SDL_Surface* image_endereco = IMG_Load(caminho);
+        SDL_Surface* image_endereco = NULL;
     
     if(image_endereco == NULL){
         printf("Imagem não encontrada para o caminho %s\n", caminho);

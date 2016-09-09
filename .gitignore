@@ -1,5 +1,7 @@
 test/lib/
 windows/lib/
+android/libs/
+android/obj/
 *.o
 *.so
 *.a
