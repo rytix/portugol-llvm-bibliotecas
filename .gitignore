@@ -2,6 +2,7 @@ test/lib/
 windows/lib/
 android/libs/
 android/obj/
+test/android-project/libs
 *.o
 *.so
 *.a

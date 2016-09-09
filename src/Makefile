@@ -22,7 +22,7 @@ TEST_LIB_FOLDER = ../test/libs
 
 
 #Android
-android: make_android build_sdl_android compile_android compile_android_so move_android
+android: make_android build_sdl_android compile_android compile_android_so move_android copy_to_test_android
 
 make_android:
 	@echo ******************* Construindo pastas *******************
@@ -44,6 +44,10 @@ move_android:
 	@echo ******************* Movendo para pasta obj *******************
 	mv *.o ../android/$(OBJ_FOLDER)
 	mv *.d ../android/$(OBJ_FOLDER)
+	mkdir -p ../test/android-project/$(BUILD_FOLDER)/
+	cp -avr ../android/$(BUILD_FOLDER)/* ../test/android-project/$(BUILD_FOLDER)/
+copy_to_test_android:
+
 
 #Windows
 windows: make_windows compile_windows copy_to_test move_windows
