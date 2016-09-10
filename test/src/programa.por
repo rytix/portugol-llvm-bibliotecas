@@ -6,33 +6,34 @@ programa
 	funcao inicio () 
 	{ 
 		graficos.iniciar_modo_grafico(falso)
-		inteiro cor = graficos.criar_cor(255, 0, 0)
+		inteiro cor = graficos.criar_cor(100, 0, 0)
 		graficos.definir_cor(cor)
-		
-		inteiro foguete = graficos.carregar_imagem("foguete.png")
 		graficos.limpar()
-		graficos.desenhar_imagem(250, 400, foguete)
+		
+		//inteiro foguete = graficos.carregar_imagem("foguete.png")
+		//graficos.limpar()
+		//graficos.desenhar_imagem(250, 400, foguete)
 		graficos.renderizar()
 
-		escreva("Preparando para lançar foguete...\n")
-		escreva("5...\n")
-		util.aguarde(1000)
-		escreva("4...\n")
-		util.aguarde(1000)
-		escreva("3...\n")
-		util.aguarde(1000)
-		escreva("2...\n")
-		util.aguarde(1000)
-		escreva("1...\n")
+		//escreva("Preparando para lançar foguete...\n")
+		//escreva("5...\n")
+		//util.aguarde(1000)
+		//escreva("4...\n")
+		//util.aguarde(1000)
+		//escreva("3...\n")
+		//util.aguarde(1000)
+		//escreva("2...\n")
+		//util.aguarde(1000)
+		//escreva("1...\n")
 		util.aguarde(1000)
 		
 
-		para(inteiro i=0; i < 1000; i++){
-			graficos.limpar()
-			util.aguarde(10)
-			graficos.desenhar_imagem(250, 400-i, foguete)
-			graficos.renderizar()
-		}
+//		para(inteiro i=0; i < 1000; i++){
+//			graficos.limpar()
+//			util.aguarde(10)
+//			graficos.desenhar_imagem(250, 400-i, foguete)
+//			graficos.renderizar()
+//		}
 		graficos.encerrar_modo_grafico()
 	} 
 }
