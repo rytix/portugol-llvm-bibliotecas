@@ -54,6 +54,7 @@ windows: make_windows compile_windows copy_to_test move_windows
 
 make_windows:
 	@echo Construindo pastas
+	mkdir -p $(TEST_LIB_FOLDER)
 	mkdir -p ../windows/$(BUILD_FOLDER)
 
 compile_windows:
