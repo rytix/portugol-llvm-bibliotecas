@@ -35,10 +35,10 @@ build_sdl_android:
 
 compile_android:
 	@echo ******************* Compilando bibliotecas *******************
-	$(NDK_PATH)$(CC_ANDROID) -MMD -MP -gcc-toolchain $(NDK_PATH)$(TOOLCHAINS) -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -no-canonical-prefixes -fno-integrated-as -g -target armv7-none-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Os -DNDEBUG  -I../android/jni/SDL/include -DANDROID  -Wa,--noexecstack -Wformat -Werror=format-security    -isystem $(NDK_PATH)/platforms/android-23/arch-arm/usr/include -c  $(FILE_SOURCE)
+	$(NDK_PATH)$(CC_ANDROID) -MMD -MP -gcc-toolchain $(NDK_PATH)$(TOOLCHAINS) -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -no-canonical-prefixes -fno-integrated-as -g -target armv7-none-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Os -DNDEBUG  -I../android/jni/SDL2_image -I../android/jni/SDL/include -DANDROID  -Wa,--noexecstack -Wformat -Werror=format-security    -isystem $(NDK_PATH)/platforms/android-23/arch-arm/usr/include -c  $(FILE_SOURCE)
 
 compile_android_so:
-	$(NDK_PATH)$(CC_ANDROID) -Wl,-soname,libportugol.so -shared --sysroot=$(NDK_PATH)/platforms/android-23/arch-arm $(FILE_OBJ) -lgcc ../android/libs/armeabi-v7a/libSDL2.so -gcc-toolchain $(NDK_PATH)/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 -no-canonical-prefixes -target armv7-none-linux-androideabi -Wl,--fix-cortex-a8  -Wl,--build-id -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,--warn-shared-textrel -Wl,--fatal-warnings   -L$(NDK_PATH)/platforms/android-23/arch-arm/usr/lib -lGLESv1_CM -lGLESv2 -llog -lc -lm -o ../android/libs/armeabi-v7a/libportugol.so
+	$(NDK_PATH)$(CC_ANDROID) -Wl,-soname,libportugol.so -shared --sysroot=$(NDK_PATH)/platforms/android-23/arch-arm $(FILE_OBJ) -lgcc ../android/libs/armeabi-v7a/libSDL2.so ../android/libs/armeabi-v7a/libSDL2_image.so -gcc-toolchain $(NDK_PATH)/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 -no-canonical-prefixes -target armv7-none-linux-androideabi -Wl,--fix-cortex-a8  -Wl,--build-id -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,--warn-shared-textrel -Wl,--fatal-warnings   -L$(NDK_PATH)/platforms/android-23/arch-arm/usr/lib -lGLESv1_CM -lGLESv2 -llog -lc -lm -o ../android/libs/armeabi-v7a/libportugol.so
 
 move_android:
 	@echo ******************* Movendo para pasta obj *******************
