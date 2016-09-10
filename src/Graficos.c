@@ -15,6 +15,7 @@ const int SCREEN_HEIGHT = 480;
 const int SCREEN_WIDTH = 640;
 
 SDL_Window* window;
+SDL_Surface* surface;
 SDL_Renderer *renderer;
 
 void portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaGraficos_limpar() {
@@ -22,6 +23,7 @@ void portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaGra
     printf("Limpando tela");
     #endif
     SDL_RenderClear(renderer);
+    
 }
 
 int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaGraficos_criar_cor(int r, int g, int b) {
@@ -51,7 +53,6 @@ void portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaGra
         printf("Desenhando ponto na posição x:%d y:%d \n", x, y);
     #endif
     SDL_RenderDrawPoint(renderer, x, y); //Renders on middle of screen.
-    SDL_RenderPresent(renderer);
     SDL_PumpEvents();
 }
 
@@ -83,7 +84,8 @@ void portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaGra
      else
     {
         //Cria janela
-        SDL_CreateWindowAndRenderer(SCREEN_WIDTH, SCREEN_HEIGHT, 0, &window, &renderer);
+        window = SDL_CreateWindow("Programa", 50, 50, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
+        renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
         if( window == NULL )
         {
             printf( "Janela não foi criada: %s\n", SDL_GetError() );
