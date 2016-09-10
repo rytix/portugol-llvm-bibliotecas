@@ -9,4 +9,5 @@ C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\res\drawable-mdpi\ic_launcher.png \
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\res\drawable-xhdpi\ic_launcher.png \
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\res\drawable-xxhdpi\ic_launcher.png \
+C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\assets\foguete.png \
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\AndroidManifest.xml \

@@ -10,24 +10,12 @@ programa
 		graficos.definir_cor(cor)
 		graficos.limpar()
 		graficos.renderizar()
-
-		inteiro cor1 = graficos.criar_cor(255, 255, 255)
-		graficos.definir_cor(cor1)
-		para(inteiro i=0; i<200; i++) {
-			para(inteiro j=0; j<100; j++){
-				graficos.desenhar_ponto(50+i, 50+j)
-			}
-			//util.aguarde(10)
-			graficos.renderizar()
-		}
-		graficos.renderizar()
-		util.aguarde(10000)
-
-		//inteiro foguete = graficos.carregar_imagem("foguete.png")
-		//graficos.limpar()
-		//graficos.desenhar_imagem(250, 400, foguete)
 		
+		inteiro foguete = graficos.carregar_imagem("foguete.png")
+		graficos.desenhar_imagem(20, 20, foguete)
+		graficos.renderizar()
 
+		util.aguarde(2000)
 		//escreva("Preparando para lançar foguete...\n")
 		//escreva("5...\n")
 		//util.aguarde(1000)

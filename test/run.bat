@@ -1,3 +1,2 @@
-@echo off
-mingw32-make run -s
+mingw32-make run
 PAUSE

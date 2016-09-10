@@ -60,7 +60,13 @@ int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaGraf
     #ifdef DEBUG
         printf("Carregando imagem \"%s\" \n", caminho);
     #endif
-    SDL_Surface* image_endereco = IMG_Load(caminho);
+
+    #ifdef ANDROID
+        SDL_RWops *file = SDL_RWFromFile(caminho, "rb");
+        SDL_Surface* image_endereco  = IMG_Load_RW(file, 1);
+    #else
+        SDL_Surface* image_endereco = IMG_Load(caminho);
+    #endif
     
     if(image_endereco == NULL){
         printf("Imagem não encontrada para o caminho %s\n", caminho);
@@ -120,7 +126,6 @@ void portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaGra
     #ifdef DEBUG
         printf("Desenhando imagem x:%d y:%d endereco:%d \n", x, y, endereco);
     #endif    
-    SDL_Surface* screen = SDL_GetWindowSurface(window);
     SDL_Surface* image_endereco = (SDL_Surface*) endereco;
     SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, image_endereco);
 
