@@ -31,7 +31,7 @@ programa
 
 		para(inteiro i=0; i < 1000; i++){
 			graficos.limpar()
-			util.aguarde(10)
+			util.aguarde(20)
 			graficos.desenhar_imagem(250, 400-i, foguete)
 			graficos.renderizar()
 		}
