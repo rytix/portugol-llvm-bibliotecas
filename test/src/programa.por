@@ -15,7 +15,7 @@ programa
 		graficos.desenhar_imagem(20, 20, foguete)
 		graficos.renderizar()
 
-		util.aguarde(2000)
+		//util.aguarde(2000)
 		//escreva("Preparando para lançar foguete...\n")
 		//escreva("5...\n")
 		//util.aguarde(1000)
@@ -29,12 +29,12 @@ programa
 		//util.aguarde(10000)
 		
 
-		//para(inteiro i=0; i < 1000; i++){
-			//graficos.limpar()
-			//util.aguarde(10)
-			//graficos.desenhar_imagem(250, 400-i, foguete)
-			//graficos.renderizar()
-		//}
+		para(inteiro i=0; i < 1000; i++){
+			graficos.limpar()
+			util.aguarde(10)
+			graficos.desenhar_imagem(250, 400-i, foguete)
+			graficos.renderizar()
+		}
 		
 		graficos.encerrar_modo_grafico()
 	} 

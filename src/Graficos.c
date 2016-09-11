@@ -1,6 +1,7 @@
 //Using SDL and standard IO
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <SDL.h>
 #if ANDROID
 #include <SDL_image.h>

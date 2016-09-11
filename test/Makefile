@@ -25,6 +25,9 @@ make_dir:
 	mkdir -p $(OBJ_FOLDER)
 	mkdir -p $(BIN_FOLDER)
 
+move_recursos_android:
+	cp recursos/*.* android-project/assets
+
 build_object_android:
 	@echo Constroi objetos no android
 	$(NDK_PATH)$(CC_ANDROID) -MMD -MP -gcc-toolchain $(NDK_PATH)$(TOOLCHAINS) -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -no-canonical-prefixes -fno-integrated-as -g -target armv7-none-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Os -DNDEBUG  -I../android/jni/SDL2_image -I../android/jni/SDL/include -DANDROID  -Wa,--noexecstack -Wformat -Werror=format-security    -isystem $(NDK_PATH)/platforms/android-23/arch-arm/usr/include -c  $(FILE_SOURCE)
@@ -44,12 +47,14 @@ ant_install:
 	cd android-project &&\
 		ant debug install
 
-android: make_dir build_bitcode build_object_android compile_android_so move_android ant_install
+android: make_dir move_recursos_android build_bitcode build_object_android compile_android_so move_android ant_install
 
 
 #WINDOWS
-windows: make_dir build_bitcode build_object compile copy_libs
+windows: make_dir move_recursos_widows build_bitcode build_object compile copy_libs
 
+move_recursos_widows:
+	cp recursos/*.* bin/
 
 build_bitcode:
 	@echo Compila programa portugol - frontend
@@ -72,7 +77,3 @@ clean:
 	@Limpa a bagunça
 	rm -R $(OBJ_FOLDER)
 	rm -R $(BIN_FOLDER)
-
-run: windows 
-	reset
-	bin\programa.exe
