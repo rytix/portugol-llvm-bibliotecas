@@ -15,6 +15,9 @@
 const int SCREEN_HEIGHT = 480;
 const int SCREEN_WIDTH = 640;
 
+float escalaLargura;
+float escalaAltura;
+
 SDL_Window* window;
 SDL_Surface* surface;
 SDL_Renderer *renderer;
@@ -93,6 +96,16 @@ void portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaGra
         //Cria janela
         window = SDL_CreateWindow("Programa", 50, 50, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
         renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
+
+        //Define Escala
+        int width = 0;
+        int height = 0;
+
+        SDL_GetWindowSize(window, &width, &height);
+
+        escalaAltura = (float)height/(float)SCREEN_HEIGHT;
+        escalaLargura = (float)width/(float)SCREEN_WIDTH;
+
         if( window == NULL )
         {
             printf( "Janela não foi criada: %s\n", SDL_GetError() );
@@ -131,10 +144,10 @@ void portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaGra
     SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, image_endereco);
 
     SDL_Rect dest;
-    dest.x = x;
-    dest.y = y;
-    dest.w = image_endereco->w;
-    dest.h = image_endereco->h;
+    dest.x = x*escalaLargura;
+    dest.y = y*escalaAltura;
+    dest.w = image_endereco->w * escalaLargura;
+    dest.h = image_endereco->h * escalaAltura;
 
     SDL_RenderCopy(renderer, texture, NULL, &dest);
 }
