@@ -1,8 +1,8 @@
 NDK_PATH = C:\Users\Bernardo\Downloads\android-ndk-r12b-windows-x86_64\android-ndk-r12b
 
-FILE_SOURCE = Graficos.c ES.c Util.c
+FILE_SOURCE = Graficos.c ES.c Util.c Mouse.c
 
-FILE_OBJ = Graficos.o ES.o Util.o
+FILE_OBJ = Graficos.o ES.o Util.o Mouse.o
 
 CC_ANDROID = /toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe
 
