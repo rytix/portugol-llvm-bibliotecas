@@ -12,22 +12,53 @@
 #include "Mouse.h"
 
 int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaMouse_posicao_x() {
-    return 0;
+	int x = 0;
+	int y = 0;
+
+	SDL_GetMouseState(&x, &y);
+
+    return x;
 }
 
 int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaMouse_posicao_y() {
-    return 0;
+	int x = 0;
+	int y = 0;
+
+	SDL_GetMouseState(&x, &y);
+
+    return y;
 }
 
 int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaMouse_ler_botao() {
-    return 0;
+	SDL_Event event;
+	SDL_PollEvent(&event);
+
+	/* If a button on the mouse is pressed. */
+    if (event.type == SDL_MOUSEBUTTONDOWN)
+    {
+        return event.button.button;
+    }
+    return -1;
 }
 
 int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaMouse_botao_pressionado(int botao) {
+    SDL_Event event;
+	SDL_PollEvent(&event);
+
+	/* If a button on the mouse is pressed. */
+    if (event.type == SDL_MOUSEBUTTONDOWN)
+    {
+        return event.button.button == botao;
+    }
+
     return 0;
 }
 
 int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaMouse_algum_botao_pressionado() {
-    return 0;
+    SDL_Event event;
+	SDL_PollEvent(&event);
+
+	/* If a button on the mouse is pressed. */
+    return event.type == SDL_MOUSEBUTTONDOWN;
 }
 
