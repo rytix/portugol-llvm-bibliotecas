@@ -3,6 +3,7 @@
 - llvm 3.1
 - MinGW
 - SDL
+- NDK
 
 
 #Instalação
