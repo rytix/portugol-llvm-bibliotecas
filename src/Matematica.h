@@ -1,0 +1,2 @@
+double portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaMatematica_arredondar(double valor, int fixar); 
+int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaMatematica_valor_absoluto(double valor); 

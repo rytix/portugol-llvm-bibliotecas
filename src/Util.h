@@ -1,1 +1,3 @@
 void portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaUtil_aguarde(int intervalor);
+int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaUtil_tempo_decorrido();
+int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaUtil_sorteia(int minimo, int maximo);

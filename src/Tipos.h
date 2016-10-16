@@ -1,0 +1,1 @@
+int portugol_core_llvm_bibliotecas_portugol_core_llvm_bibliotecas_BibliotecaTipos_real_para_inteiro(double valor);

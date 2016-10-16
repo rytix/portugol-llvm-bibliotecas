@@ -1,1 +1,2 @@
-mingw32-make windows -s
+mingw32-make windows
+PAUSE

@@ -9,5 +9,15 @@ C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\res\drawable-mdpi\ic_launcher.png \
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\res\drawable-xhdpi\ic_launcher.png \
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\res\drawable-xxhdpi\ic_launcher.png \
+C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\assets\dpad.png \
+C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\assets\fogo.png \
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\assets\foguete.png \
+C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\assets\foguete_quebrado.png \
+C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\assets\fundo.jpg \
+C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\assets\jato_foguete1.png \
+C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\assets\jato_foguete2.png \
+C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\assets\menu.jpg \
+C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\assets\moon.png \
+C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\assets\planetas.png \
+C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\assets\plataforma_pouso.png \
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\AndroidManifest.xml \
