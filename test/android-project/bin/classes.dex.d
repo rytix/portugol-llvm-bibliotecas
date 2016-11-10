@@ -4,6 +4,7 @@ C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\classes\org\libsdl\app\R$attr.class \
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\classes\org\libsdl\app\R$drawable.class \
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\classes\org\libsdl\app\R$layout.class \
+C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\classes\org\libsdl\app\R$mipmap.class \
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\classes\org\libsdl\app\R$string.class \
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\classes\org\libsdl\app\R.class \
 C:\Users\Bernardo\Projects\science-computer\llvm\portugol-llvm-bibliotecas\test\android-project\bin\classes\org\libsdl\app\SDLActivity$1.class \
