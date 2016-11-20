@@ -75,7 +75,7 @@ programa
 	/* Variáveis utilizadas para controlar o FPS e o tempo de jogo */
 	inteiro tempo_inicio_jogo = 0, tempo_total_jogo = 0
 
-	inteiro tempo_inicio = 0, tempo_decorrido = 0, tempo_restante = 0, tempo_quadro = 1
+	inteiro tempo_inicio = 0, tempo_decorrido = 0, tempo_restante = 0, tempo_quadro = 1, tempo_atualizacao=0, tempo=0, quadros=0
 	
 	
 	/* Variáveis que armazenam o endereço de memória das imagens utilizadas no jogo */
@@ -94,18 +94,25 @@ programa
 
 		enquanto (nao t.tecla_pressionada(t.TECLA_ESC))
 		{
-			//g.limpar()
 			tempo_inicio = u.tempo_decorrido()
-			
-			atualizar()
 			desenhar()
-			
-			tempo_decorrido = u.tempo_decorrido() - tempo_inicio
-			tempo_restante = tempo_quadro - tempo_decorrido 
 
+			tempo_decorrido = u.tempo_decorrido() - tempo_inicio
+			tempo_atualizacao += tempo_decorrido
+			se(tempo_atualizacao > 20)
+			{
+				atualizar()
+				tempo_atualizacao = 0
+			}
+			
+			
+			tempo += tempo_decorrido
+			quadros++
 			se (TAXA_ATUALIZACAO > 0  e tempo_restante > 0)
 			{
 				u.aguarde(tempo_restante)
+				//escreva("FPS:", quadros, "\n")
+				quadros=0
 			}
 		}
 	}
@@ -180,7 +187,6 @@ programa
 	{
 		x_foguete += m.arredondar(velocidade_horizontal, 1)
 		y_foguete += m.arredondar(velocidade_vertical, 1)
-		escreva("foguete: %d", y_foguete)
 	}
 
 	funcao atualizar_estado_foguete()
