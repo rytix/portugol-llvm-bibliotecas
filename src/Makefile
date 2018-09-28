@@ -54,8 +54,9 @@ windows: make_windows compile_windows copy_to_test move_windows
 
 make_windows:
 	@echo Construindo pastas
-	mkdir -p $(TEST_LIB_FOLDER)
-	mkdir -p ../windows/$(BUILD_FOLDER)
+	mkdir "$(TEST_LIB_FOLDER)"
+	@echo TEST
+	mkdir "../windows/$(BUILD_FOLDER)"
 
 compile_windows:
 	@echo Compilando bibliotecas
@@ -64,9 +65,9 @@ compile_windows:
 
 move_windows:
 	@echo Movendo para pasta bin
-	mv *.o ../windows/$(BUILD_FOLDER)
+	move *.o "../windows/$(BUILD_FOLDER)"
 
 #Utilitários
 copy_to_test:
 	@echo Copiando para o projeto de teste
-	cp *.o $(TEST_LIB_FOLDER)
+	copy *.o "$(TEST_LIB_FOLDER)"

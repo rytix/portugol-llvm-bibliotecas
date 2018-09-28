@@ -5,6 +5,7 @@
 - SDL
 - NDK
 
+Extrair dentro da pasta do projeto: https://drive.google.com/file/d/12iesB-Dg4h8SK2S14GscCAkp3XYcxAMc/view?usp=sharing
 
 #Instalação
 

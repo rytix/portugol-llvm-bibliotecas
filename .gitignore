@@ -5,6 +5,8 @@ android/obj/
 test/android-project/bin
 test/android-project/libs
 test/bin/*
+GWLLSD/*
+Aleluia/*
 *.o
 *.so
 *.a

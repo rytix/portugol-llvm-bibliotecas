@@ -22,11 +22,11 @@ OUTPUT_FILE = programa
 
 make_dir:
 	@echo Cria pastas
-	mkdir -p $(OBJ_FOLDER)
-	mkdir -p $(BIN_FOLDER)
+	mkdir "$(OBJ_FOLDER)"
+	mkdir "$(BIN_FOLDER)"
 
 move_recursos_android:
-	cp recursos/*.* android-project/assets
+	copy "recursos/*.*" "android-project/assets"
 
 build_object_android:
 	@echo Constroi objetos no android
@@ -54,7 +54,7 @@ android: make_dir move_recursos_android build_bitcode build_object_android compi
 windows: make_dir move_recursos_widows build_bitcode build_object compile copy_libs
 
 move_recursos_widows:
-	cp recursos/*.* bin/
+	copy "recursos" "bin"
 
 build_bitcode:
 	@echo Compila programa portugol - frontend
@@ -66,7 +66,7 @@ build_object:
 
 copy_libs:
 	@echo Copia arquivos
-	cp $(LIB_FOLDER)/*.dll $(BIN_FOLDER)/
+	copy "$(LIB_FOLDER)/*.dll" "$(BIN_FOLDER)/"
 
 
 compile:
