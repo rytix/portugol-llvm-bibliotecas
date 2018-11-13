@@ -7,6 +7,8 @@ test/android-project/libs
 test/bin/*
 GWLLSD/*
 Aleluia/*
+r16b/*
 *.o
 *.so
 *.a
+portugol-llvm-bibliotecas\.7z
