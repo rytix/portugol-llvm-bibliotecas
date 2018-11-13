@@ -1,4 +1,4 @@
-NDK_PATH = C:\Users\Rytix\Desktop\portugol-llvm-bibliotecas\r16b
+NDK_PATH = ..\r16b
 
 TOOLCHAINS = \toolchains\arm-linux-androideabi-4.9\prebuilt\windows-x86_64
 
@@ -30,13 +30,14 @@ move_recursos_android:
 
 build_object_android:
 	@echo Constroi objetos lib no android
-	$(NDK_PATH)$(CC_ANDROID) -MMD -MP -gcc-toolchain $(NDK_PATH)$(TOOLCHAINS) -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -no-canonical-prefixes -fno-integrated-as -g -target armv7-none-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Os -DNDEBUG  -I..\android\jni\SDL2_image -I..\android\jni\SDL\lib -DANDROID  -Wa,--noexecstack -Wformat -Werror=format-security    -isystem $(NDK_PATH)\platforms\android-23\arch-arm\usr\lib -c  $(FILE_SOURCE) 
-	$(NDK_PATH)$(CC_ANDROID) -MMD -MP -gcc-toolchain $(NDK_PATH)$(TOOLCHAINS) -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -no-canonical-prefixes -fno-integrated-as -g -target armv7-none-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Os -DNDEBUG  -I..\android\jni\SDL2_image -I..\android\jni\SDL\lib -DANDROID  -Wa,--noexecstack -Wformat -Werror=format-security    -isystem $(NDK_PATH)\platforms\android-23\arch-arm\usr\lib -c  ..\android\jni\SDL\src\main\android\SDL_android_main.c
+	$(NDK_PATH)$(CC_ANDROID) -MMD -MP -gcc-toolchain $(NDK_PATH)$(TOOLCHAINS) -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -no-canonical-prefixes -fno-integrated-as -g -target armv7-none-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Os -DNDEBUG  -I..\android\jni\SDL2_image -I..\android\jni\SDL\include -I$(NDK_PATH)\sysroot\usr\include -I$(NDK_PATH)\sysroot\usr\include\arm-linux-androideabi -DANDROID  -Wa,--noexecstack -Wformat -Werror=format-security    -isystem $(NDK_PATH)\platforms\android-23\arch-arm\usr\lib -c  $(FILE_SOURCE) 
+	$(NDK_PATH)$(CC_ANDROID) -MMD -MP -gcc-toolchain $(NDK_PATH)$(TOOLCHAINS) -fpic -ffunction-sections -funwind-tables -fstack-protector-strong -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -no-canonical-prefixes -fno-integrated-as -g -target armv7-none-linux-androideabi -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Os -DNDEBUG  -I..\android\jni\SDL2_image -I..\android\jni\SDL\include -I$(NDK_PATH)\sysroot\usr\include -I$(NDK_PATH)\sysroot\usr\include\arm-linux-androideabi -DANDROID  -Wa,--noexecstack -Wformat -Werror=format-security    -isystem $(NDK_PATH)\platforms\android-23\arch-arm\usr\lib -c  ..\android\jni\SDL\src\main\android\SDL_android_main.c
+	@echo Construido objetos lib no android
 
 move_android:
 	@echo Movendo arquivos
-	mv *.o $(OBJ_FOLDER)
-	mv *.d $(OBJ_FOLDER)
+	move "*.o" "$(OBJ_FOLDER)"
+	move "*.d" "$(OBJ_FOLDER)"
 
 compile_android_so:
 	@echo Criando a biblioteca compartilhada
