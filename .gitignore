@@ -5,7 +5,9 @@ test/android-project/bin
 test/bin/*
 GWLLSD/*
 Aleluia/*
+sdk/*
 r16b/*
+apache-ant/*
 *.o
 *.so
 *.a

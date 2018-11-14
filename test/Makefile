@@ -46,7 +46,7 @@ compile_android_so:
 ant_install:
 	@echo Instalando a aplicacao
 	cd android-project &&\
-		ant debug install
+		ant release install
 
 android: make_dir move_recursos_android build_bitcode build_object_android compile_android_so move_android ant_install
 
